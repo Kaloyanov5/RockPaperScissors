@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --main-color: #0398fc;
+    --lose-color: #ff1414;
+    --win-color: #14ff24;
+    --text-color: white;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.stats-layout{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    top: 0;
+    width: 100vw;
+    height: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.game-layout{
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 400px;
+    height: 400px;
+}
+
+.choice{
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#game-text{
+    font-size: 1.3rem;
+}
+
+#ai-choice{
+    background: url(./images/robot.png);
+    background-size: cover;
+    cursor:default;
+}
+
+#player-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#rock{
+    background: url(./images/rock.png);
+    background-size: cover;
+}
+
+#paper{
+    background: url(./images/paper.png);
+    background-size: cover;
+}
+
+#scissors{
+    background: url(./images/scissors.png);
+    background-size: cover;
+}
+
+#reset-game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 12;
+}
